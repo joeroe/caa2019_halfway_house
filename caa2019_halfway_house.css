@@ -1,0 +1,25 @@
+/* Media */
+@page {
+	size: A0 portrait;
+}
+
+@media screen {
+	body {
+		background: #eeeeee;
+	}
+	
+	#page {
+		width: 841mm;
+		height: 1189mm;
+		background: #ffffff;
+		display: block;
+		margin: 10mm auto 15mm auto;
+		box-shadow: 0 0 5mm rgba(0,0,0,0.5);
+	}
+}
+
+@media print {
+	body, #page {
+		margin: 0;
+	}
+}
