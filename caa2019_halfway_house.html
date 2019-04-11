@@ -8,14 +8,149 @@
 </head>
 <body>
 	<div id="page">
-    		<h1>A halfway house: open source tools for tidy photographic and 3D data management between the field and the archive</h1>
 
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis libero metus, sagittis at dolor rutrum, tempus sodales ipsum. Curabitur faucibus, est nec dictum viverra, libero dolor fringilla velit, in facilisis justo dolor id ante. Morbi sed libero risus. Proin dapibus justo libero, sed vehicula ligula commodo a. Curabitur ac dui quis sem varius tempus. Curabitur consectetur massa ut tincidunt mattis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer interdum dolor sit amet lacus efficitur pellentesque. Vestibulum suscipit ultrices odio id congue. Aenean vel dui eu enim viverra porta id in nibh. Quisque eget lectus a dolor vestibulum aliquet et quis mi. Maecenas dignissim magna nibh, eu viverra augue vestibulum rhoncus. Donec non ante quis nisi convallis eleifend et id lorem. Ut dolor sem, pretium eu interdum et, porttitor non erat. Vestibulum porta iaculis ex ac pretium. Donec in enim at ipsum aliquet porta.</p>
+    <header id="ku">
+      <h1>Københavns Universitet</h1>
+      <h2>Institut for Tværkulturelle og Regionale Studier</h2>
+      <img src="images/ku_logo.svg" id="ku_logo" />
+    </header>
 
-		<p>Suspendisse eget pharetra purus. Nunc congue tempor est, eget tristique massa luctus ac. Nullam tempus scelerisque ante, in sagittis augue mollis at. Cras nunc felis, pretium placerat metus vitae, condimentum sollicitudin leo. Mauris vel erat sem. Donec aliquet odio eu nunc malesuada, eget mattis odio accumsan. Duis viverra nisl ipsum, ac placerat turpis scelerisque eget. Morbi sit amet ullamcorper justo, quis sollicitudin ante. Integer condimentum purus eu augue consequat commodo. Duis eget tortor dictum, imperdiet turpis sed, egestas tellus. Integer est odio, lacinia non odio nec, varius tempus ante.</p>
 
-		<p>Ut sagittis ornare est, facilisis vestibulum justo. Donec sit amet libero auctor quam feugiat ultricies. Ut a mollis libero. Morbi ex nunc, ultrices nec lorem et, tincidunt molestie diam. Nam luctus nunc lectus, id sodales libero condimentum nec. Fusce nec odio volutpat, pharetra ex ac, vestibulum sem. Donec sit amet tellus ut magna iaculis egestas ut sed nisl. Nullam consectetur arcu ut erat facilisis, ut commodo lacus lacinia.</p>
 
+      <section id="abstract">
+        <h1>
+          A halfway house: open source tools for tidy photographic and 3D data management between the field and the archive
+        </h1>
+    		<p>
+          Taming messy data is a tedious but essential task for all archaeologists. Photographic data can be particularly troublesome. Even modest field projects accumulate large volumes of images, which come with their own formats and metadata standards that don’t fit easily into existing data management systems. The advent of photogrammetry as a common part of field recording compounds this complexity. Progress has been made in the production and maintenance of long-term archives (OAIS, CIDOC CRM, ADS, tDAR, etc.) However, with large research projects, it can take years or decades before data is ready to “deposit” into an archive. This poster asks: what do we do in the meantime? What is the best way to keep photographic archives tidy, short of a permanent, static archive and the associated overheads? How can we maintain an authoritative database, but retain the flexibility and accessibility needed for ongoing research with multiple collaborators? Our approach to this problem uses server–client architecture to maintain a single, consistent research database.
+        </p>
+        <p>
+          We combine existing open source software packages (Piwigo, 3DHOP, PostgreSQL) with custom extensions to provide a simple, web-based frontend for intuitive navigation of photographic and 3D data. Critically, the underlying filesystem is independent of this platform, so the data remains fully accessible to software preferred by specialists. Key metadata is also stored at the file level, meaning data can be cleanly separated from the software used to view it and remain ‘archive ready’. We suggest that our approach may help other projects facing similar challenges.
+        </p>
+      </section>
+
+      <section id="content">
+
+
+      <div id="front_end" class="box">
+        <div class="">
+          <div class="text">
+              <h2>Approachable</h2>
+            <p>
+                Piwigo provides a friendly face for non-specialsts to navigate complex datasets. A simple user interface that allows tag-based searching of images (jpg) and 3D data (3Dhop) wtih Raw data downloadable on demand.
+            </p>
+            <p>
+              Cross platform support with easy setup through LAMP server and plugin modules for advanced features such as mapping, customized extension.
+            </p>
+          </div>
+        </div>
+        <img class="screenshot" src="" alt="">
+        <img class="screenshot" src="" alt="">
+      </div>
+
+      <div id="data_entry" class="box  sub-box">
+        <div class="text">
+          <h2>
+            Updatable
+          </h2>
+          <p>
+            Simple data hierarchy allows for flexible data collection streams.</p>
+            <p>
+            Spreadsheets, photo manager data, or custom databases can be readily formatted for access with tools like Open Refine. <br/>
+            Data written to files with Exiftool, specialist software (e.g. Adobe Lightroom) or by hand.
+          </p>
+        </div>
+      </div>
+
+
+      <div id="other_views" class="box sub-box">
+        <div class="text">
+        <h2>
+          Communicable
+        </h2>
+
+        <p>
+          Data is not locked within a single  system.</p>
+        <p>
+           Cross platform access at system level or through common image specialist tools (XnViewMP, Adobe Lightroom, Photoshop etc.).
+        </p>
+        </div>
+      </div>
+
+      <div id="metadata" class="box sub-box">
+        <div class="text">
+          <h2>
+            Supportive
+          </h2>
+          <p>
+            Image metadadata stored at file level in jpg images access through Exiftool.
+          </p>
+          <p>
+            YAML companion files provide information for formats that don't support integrated metadata (3D and RTI files) while remaining human-readable.
+          </p>
+        </div>
+      </div>
+
+    <div id="expendible" class="box sub-box">
+      <div class="text">
+        <h2>
+          Expendible
+        </h2>
+        <p>
+          Not-essential for access or maintanance of data. Can be discarded during archving.
+        </p>
+      </div>
+    </div>
+
+      <div id="structure" class="box sub-box">
+        <div class="text">
+          <h2>
+            Passive
+          </h2>
+          <p>
+            Auto-indexing allows non-prescriptive folder structure and adjustments during project life cycle.
+          </p>
+        <div>
+      </div>
+
+
+
+    </section>
+    <footer>
+      <div id="acknowledgements">
+        <h2>Acknowledgements</h2>
+  <p>Piwigo, 3dhop, exiftool, soemthing something</p>
+
+  <img src="images/github_qr.png" />
+      </div>
+      <div id="logos" class="col-third">
+        <img src="images/davids_logo.svg" id="davids_logo" />
+        <figure>
+          <img src="images/cseas_logo.png" id="cseas_logo" />
+          <caption>Centre for the Study of Early<br /> Agricultural Societies</caption>
+        </figure>
+      </div>
+      <div id="authors">
+  <div class="author">
+    <img src="images/joe.jpg" />
+          <h2>Joe Roe</h2>
+          <p>Research assistant, University of Copenhagen</p>
+          <ul>
+            <li><a href="https://joeroe.io">https://joeroe.io</a></li>
+            <li><a href="mailto:jwg983@hum.ku.dk">jwg983@hum.ku.dk</a></li>
+          </ul>
+  </div>
+  <div class="author">
+      <img alt="yeah sure i'll find a photo"/ class="img">
+          <h2>Alexis Pantos</h2>
+          <p>Shubayqa Project Photographer, University of Copenhagen</p>
+          <ul>
+
+            <li><a href="mailto:gapantos@gmail.com">gapantos@gmail.com</a></li>
+          </ul>
+  </div>
+      </div>
+    </footer>
 	</div>
 </body>
 </html>
