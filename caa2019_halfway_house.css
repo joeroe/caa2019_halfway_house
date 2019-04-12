@@ -110,14 +110,11 @@ section {
 div.box {
 	overflow:hidden;
 	padding:15mm;
-	border: 1mm solid white;
+	border: none;
 	position:absolute;
 	text-align:center;
 	background-position: top center;
 	background-repeat: no-repeat;
-
-	/*findme: temp*/
-	border: solid 1px #ccc;
 }
 
 div.box .text{
@@ -126,7 +123,7 @@ div.box .text{
 }
 
 div.box img{
-	width:45%;
+	width: 60%;
 	display:inline-block;
 	margin:5mm;
 
@@ -147,16 +144,14 @@ div.sub-box h2{
 
 #front_end {
 	width:300mm;
-	height:240mm;
+	height:540mm;
 	left:255mm;
 	top: 480mm;
-	background-image:url('images/front_end.jpg');
-	background-size: 60%;
-	padding-top:120mm;
+	background-image:url('images/front_end.png');
+	background-size: 80%;
+	padding-top:150mm;
 	z-index:5000;
 
-/*findme: temp*/
-	border: none;
 }
 
 #front_end img{
@@ -164,17 +159,33 @@ div.sub-box h2{
 }
 
 #data_entry {
-	width: 160mm;
-	height: 150mm;
-	left:70mm;
-	top: 470mm;
+	width: 400mm;
+	height: 280mm;
+	left:40mm;
+	top: 390mm;
+	background-image:url('images/data_entry.jpg');
+	background-size: 100%;
+}
+
+#data_entry .text{
+	margin-left: 40mm;
+	margin-top: 30mm;
+	width: 130mm;
 }
 
 #structure {
-	width: 130mm;
-	height: 130mm;
+	width: 290mm;
+	height: 240mm;
 	left:520mm;
 	top: 740mm;
+	background-image:url('images/structure.jpg');
+	background-size: 100%;
+}
+
+#structure .text{
+	width: 80mm;
+	margin-top: -10mm;
+	margin-left: 130mm;
 }
 
 #other_views {
@@ -203,11 +214,41 @@ div.sub-box h2{
 }
 
 #expendible {
-	width: 120mm;
-	height: 100mm;
-	top: 770mm;
-	left: 90mm;
+	width: 390mm;
+	height: 340mm;
+	top: 650mm;
+	left: 40mm;
+	background-image:url('images/expendible.jpg');
+	background-size: 80%;
+	background-position: left;
 }
+
+#expendible .text {
+	position:absolute;
+	bottom:45mm;
+	width:75mm;
+	left:8mm;
+}
+
+
+
+#filtered {
+	width: 400mm;
+	height: 280mm;
+	left:20mm;
+	top: 620mm;
+	/*background-image:url('images/data_entry.jpg');
+	background-size: 100%;*/
+	z-index:800;
+}
+
+#filtered .text{
+	margin-left: 30mm;
+	margin-top: 40mm;
+	width: 120mm;
+}
+
+
 
 /* footer */
 
