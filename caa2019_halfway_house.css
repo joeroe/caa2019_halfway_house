@@ -177,7 +177,7 @@ div.sub-box h2{
 	width: 290mm;
 	height: 240mm;
 	left:520mm;
-	top: 740mm;
+	top: 610mm;
 	background-image:url('images/structure.jpg');
 	background-size: 100%;
 }
@@ -207,10 +207,13 @@ div.sub-box h2{
 }
 
 #metadata {
-	width: 150mm;
+	width: 110mm;
 	height: 100mm;
-	left:265mm;
+	left:540mm;
 	top: 870mm;
+	z-index:1000;
+	background-image:url('images/label.png');
+	background-size: 100%;
 }
 
 #expendible {
@@ -233,19 +236,19 @@ div.sub-box h2{
 
 
 #filtered {
-	width: 400mm;
-	height: 280mm;
+	width: 300mm;
+	height: 200mm;
 	left:20mm;
 	top: 620mm;
-	/*background-image:url('images/data_entry.jpg');
-	background-size: 100%;*/
+	background-image:url('images/filtered.png');
+	background-size: 80%;
 	z-index:800;
 }
 
 #filtered .text{
-	margin-left: 30mm;
-	margin-top: 40mm;
-	width: 120mm;
+	margin-left: 45mm;
+	margin-top: 10mm;
+	width: 100mm;
 }
 
 
