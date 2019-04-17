@@ -1,171 +1,142 @@
 <!DOCTYPE HTML>
 <html>
-<head>
-    <meta charset="utf-8" />
-    <title>A halfway house</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="caa2019_halfway_house.css" />
-</head>
-<body>
-	<div id="page">
+    <head>
+        <meta charset="utf-8" />
+        <title>A halfway house</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,900" rel="stylesheet">
+        <link rel="stylesheet" href="caa2019_halfway_house.css" />
+    </head>
+    <body>
+        <div id="page">
 
-    <header id="ku">
-      <h1>Københavns Universitet</h1>
-      <h2>Institut for Tværkulturelle og Regionale Studier</h2>
-      <img src="images/ku_logo.svg" id="ku_logo" />
-    </header>
+            <header id="ku">
+                <h1>Københavns Universitet</h1>
+                <h2>Institut for Tværkulturelle og Regionale Studier</h2>
+                <img src="images/ku_logo.svg" id="ku_logo" />
+            </header>
 
+            <section id="frontmatter">
+                <h1><span id="pun">A halfway house</span><br />Open source tools for tidy photographic and 3D data management between the field and the archive</h1>
+                <div id="abstract">
+                    <p>Taming messy data is a tedious but essential task for all archaeologists. Photographic data can be particularly troublesome. Even modest field projects accumulate large volumes of images, which come with their own formats and metadata standards that don’t fit easily into existing data management systems. The advent of photogrammetry as a common part of field recording compounds this complexity. Progress has been made in the production and maintenance of long-term archives (OAIS, CIDOC CRM, ADS, tDAR, etc.) However, with large research projects, it can take years or decades before data is ready to “deposit” into an archive. This poster asks: what do we do in the meantime? What is the best way to keep photographic archives tidy, short of a permanent, static archive and the associated overheads? How can we maintain an authoritative database, but retain the flexibility and accessibility needed for ongoing research with multiple collaborators? Our approach to this problem uses server–client architecture to maintain a single, consistent research database.  </p>
+                    <p>We combine existing open source software packages (Piwigo, 3DHOP, PostgreSQL) with custom extensions to provide a simple, web-based frontend for intuitive navigation of photographic and 3D data. Critically, the underlying filesystem is independent of this platform, so the data remains fully accessible to software preferred by specialists. Key metadata is also stored at the file level, meaning data can be cleanly separated from the software used to view it and remain ‘archive ready’.</p>
+                    <p>The approach outlined here may help other projects facing similar challenges.</p>
+                </div>
+            </section>
 
+            <section id="content">
+                <div id="front_end" class="box">
+                    <img class="screenshot" src="images/pwg_screenshot2.png" />
+                    <img class="screenshot" src="images/pwg_screenshot1.png" />
+                    <div class="text">
+                        <h2>Approachable</h2>
+                        <p>Piwigo provides a friendly face for non-specialists to navigate large photographic archives. A simple user interface that allows tag-based searching of images (JPG) and 3D data with RAW and other alternative formats downloadable on demand.</p>
+                        <p>It is web-based, enabling cross-platform support with easy(ish) setup on a standard LAMP server. A large collection of plugins provide advanced features; for example, we create a plugin to view 3D models with 3DHOP.</p>
+                    </div>
+                </div>
 
-      <section id="abstract">
-        <h1>
-          A halfway house: open source tools for tidy photographic and 3D data management between the field and the archive
-        </h1>
-    		<p>
-          Taming messy data is a tedious but essential task for all archaeologists. Photographic data can be particularly troublesome. Even modest field projects accumulate large volumes of images, which come with their own formats and metadata standards that don’t fit easily into existing data management systems. The advent of photogrammetry as a common part of field recording compounds this complexity. Progress has been made in the production and maintenance of long-term archives (OAIS, CIDOC CRM, ADS, tDAR, etc.) However, with large research projects, it can take years or decades before data is ready to “deposit” into an archive. This poster asks: what do we do in the meantime? What is the best way to keep photographic archives tidy, short of a permanent, static archive and the associated overheads? How can we maintain an authoritative database, but retain the flexibility and accessibility needed for ongoing research with multiple collaborators? Our approach to this problem uses server–client architecture to maintain a single, consistent research database.
-        </p>
-        <p>
-          We combine existing open source software packages (Piwigo, 3DHOP, PostgreSQL) with custom extensions to provide a simple, web-based frontend for intuitive navigation of photographic and 3D data. Critically, the underlying filesystem is independent of this platform, so the data remains fully accessible to software preferred by specialists. Key metadata is also stored at the file level, meaning data can be cleanly separated from the software used to view it and remain ‘archive ready’. We suggest that our approach may help other projects facing similar challenges.
-        </p>
-      </section>
+                <div id="data_entry" class="box sub-box">
+                    <div class="text">
+                        <h2>Flexible</h2>
+                        <p>A simple tag hierarchy is compatible with range of data collection streams.</p>
+                        <p>Spreadsheet data, photo manager tags, or PostgreSQL databases can be easily mapped or used directly.</p>
+                    </div>
+                </div>
 
-      <section id="content">
+                <div id="filtered" class="box sub-box">
+                    <div class="text">
+                        <h2>Tidy</h2>
+                        <p>Data cleaned with OpenRefine and can be both saved as metadata and exported to a database.</p>
+                        <p>Flexible interfaces allow for progressive cleaning.</p>
+                    </div>
+                </div>
 
+                <div id="safe" class="box sub-box">
+                    <div class="text">
+                        <h2>Safe</h2>
+                        <p>Vocabularies, naming conventions and a centralised file system with controlled access protects data conformity and integrity.</p>
+                        <p>Most users view the archive through clients (e.g. Piwigo) rather than accessing the filesystem directly.</p>
+                    </div>
+                </div>
 
-      <div id="front_end" class="box">
-        <div class="">
-          <div class="text">
-              <h2>Approachable</h2>
-            <p>
-              Piwigo provides a friendly face for non-specialsts to navigate complex datasets. A simple user interface that allows tag-based searching of images (jpg) and 3D data (3Dhop) with Raw and alternate formats downloadable on demand.
-            </p>
-            <p>
-              Cross platform support with easy setup through LAMP server and plugin modules for advanced features such as mapping, or customized extension.
-            </p>
-          </div>
-        </div>
-        <img class="screenshot" src="" alt="">
-        <img class="screenshot" src="" alt="">
-      </div>
+                <div id="other_views" class="box sub-box">
+                    <div class="text">
+                        <h2>Portable</h2>
+                        <p>Data is not locked within a single system.</p>
+                        <p>Cross-platform access at system level or through common image specialist tools (QGIS, Adobe Lightroom, XnViewMP, Photoshop etc.)</p>
+                    </div>
+                </div>
 
-      <div id="data_entry" class="box sub-box">
-        <div class="text">
-          <h2>
-            Flexible
-          </h2>
-          <p>
-            Simple tag hierarchy is compatible with range of data collection streams.</p>
-            <p>
-            Spreadsheet data, photo manager tags, or postgres databases can be easily mapped or used directly.
-          </p>
+                <div id="metadata" class="box sub-box">
+                    <div class="text">
+                        <h2>Documented</h2>
+                        <p>Metadata is stored at file level in images, editable through Exiftool or Adobe Lightroom.</p>
+                        <p>Human and machine-readable YAML files used for formats that don't support integrated metadata (e.g. 3D and RTI files).</p>
+                    </div>
+                </div>
 
-        </div>
-      </div>
+                <div id="expendible" class="box sub-box">
+                    <div class="text">
+                        <h2>Expendable</h2>
+                        <p>Specific client systems aren't needed for access or maintanance of data. They can be discarded during archiving.</p>
+                    </div>
+                </div>
 
+                <div id="structure" class="box sub-box">
+                    <div class="text">
+                        <h2>Incremental</h2>
+                        <p>Auto-indexing allows non-prescriptive folder structure and adjustments during project life cycle.</p>
+                    </div>
+                </div>
 
-      <div id="filtered" class="box sub-box">
-          <div class="text">
-              <h2>Filtered</h2>
-            <p>
-              Data cleaned with Open Refine and can be ingested to PostGres database.
-            </p>
-            <p>
-              Vocab lists, naming conventions and centralised file system with restricted access protects data conformity and integrity.
-            </p>
-          </div>
-        </div>
-
-
-
-
-
-      <div id="other_views" class="box sub-box">
-        <div class="text">
-        <h2>
-          Communicable
-        </h2>
-
-        <p>
-          Data is not locked within a single system.</p>
-        <p>
-           Cross platform access at system level or through common image specialist tools (QGIS, Adobe Lightroom, XnViewMP, Photoshop etc.).
-        </p>
-        </div>
-      </div>
-
-      <div id="metadata" class="box sub-box">
-        <div class="text">
-          <h2>
-            Supportive
-          </h2>
-          <p>
-            Image metadadata stored at file level in jpg images, editable through Exiftool or Adobe Lightroom.
-          </p>
-          <p>
-            YAML companion files provide information and control access for formats that don't support integrated metadata (3D and RTI files) while remaining human-readable.
-          </p>
-        </div>
-      </div>
-
-    <div id="expendible" class="box sub-box">
-      <div class="text">
-        <h2>
-          Expendible
-        </h2>
-        <p>
-          Not-essential for access or maintanance of data. Can be discarded during archiving.
-        </p>
-      </div>
-    </div>
-
-      <div id="structure" class="box sub-box">
-        <div class="text">
-          <h2>
-            Passive
-          </h2>
-          <p>
-            Auto-indexing allows non-prescriptive folder structure and adjustments during project life cycle.
-          </p>
-        <div>
-      </div>
+            </section>
 
 
+            <footer>
+                <div id="acknowledgements">
+                    <h2>Open source software</h2>
+                    <ul>
+                        <li><b>Piwigo</b>: <a href="https://piwigo.org/">piwigo.org</a></li>
+                        <li><b>OpenRefine</b>: <a href="http://openrefine.org/">openrefine.org</a></li>
+                        <li><b>3DHOP</b>: <a href="http://www.3dhop.net/">3dhop.net</a></li>
+                        <li><b>piwigo-3dhop</b>: <a href="https://github.com/joeroe/piwigo-3dhop">github.com/joeroe/piwigo-3dhop</a></li>
+                    </ul>
 
-    </section>
-    <footer>
-      <div id="acknowledgements">
-        <h2>Acknowledgements</h2>
-  <p>Piwigo, 3dhop, exiftool, soemthing something</p>
-
-  <img src="images/github_qr.png" />
-      </div>
-      <div id="logos" class="col-third">
-        <img src="images/davids_logo.svg" id="davids_logo" />
-        <figure>
-          <img src="images/cseas_logo.png" id="cseas_logo" />
-          <caption>Centre for the Study of Early<br /> Agricultural Societies</caption>
-        </figure>
-      </div>
-      <div id="authors">
-  <div class="author">
-      <img alt="aP" src="images/ap.jpg" class="img" />
-          <h2>Alexis Pantos</h2>
-          <p>Shubayqa Project Photographer, University of Copenhagen</p>
-          <ul>
-            <li><a href="mailto:gapantos@gmail.com">gapantos@gmail.com</a></li>
-          </ul>
-  </div>
-  <div class="author">
-    <img src="images/joe.jpg" />
-          <h2>Joe Roe</h2>
-          <p>Research assistant, University of Copenhagen</p>
-          <ul>
-            <li><a href="https://joeroe.io">https://joeroe.io</a></li>
-            <li><a href="mailto:jwg983@hum.ku.dk">jwg983@hum.ku.dk</a></li>
-          </ul>
-  </div>
-      </div>
-    </footer>
-	</div>
-</body>
+                    <h2>Reproducible research</h2>
+                    <p>The source code for this poster can be found on GitHub: <a href="https://github.com/joeroe/caa2019_halfway_house">github.com/joeroe/caa2019_halfway_house</a></p>
+                </div>
+                <div id="logos" class="col-third">
+                    <img src="images/davids_logo.svg" id="davids_logo" />
+                    <figure>
+                        <img src="images/cseas_logo.png" id="cseas_logo" />
+                        <caption>Centre for the Study of Early<br /> Agricultural Societies</caption>
+                    </figure>
+                </div>
+                <div id="authors">
+                    <div class="author">
+                        <img alt="aP" src="images/ap.jpg" class="img" />
+                        <h2>Alexis Pantos</h2>
+                        <p>Photographer<br />
+                        Shubayqa Archaeological Project<br />
+                        University of Copenhagen</p>
+                        <ul>
+                            <li><a href="mailto:gapantos@gmail.com">gapantos@gmail.com</a></li>
+                        </ul>
+                    </div>
+                    <div class="author">
+                        <img src="images/joe.jpg" />
+                        <h2>Joe Roe</h2>
+                        <p>Research assistant<br />
+                        University of Copenhagen</p>
+                        <ul>
+                            <li><a href="https://joeroe.io">https://joeroe.io</a></li>
+                            <li><a href="mailto:jwg983@hum.ku.dk">jwg983@hum.ku.dk</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+                    </div>
+    </body>
 </html>
