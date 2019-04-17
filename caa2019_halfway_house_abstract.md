@@ -3,7 +3,7 @@ Poster submission
 
 # Open source tools for tidy photographic and 3D data management between the field and the archive
 
-Alexis Pantos <<gapantos@gmail.com>> and Joe Roe <<jwg983@hum.ku.dk>>  
+G. Alexis Pantos <<gapantos@gmail.com>> and Joe Roe <<jwg983@hum.ku.dk>>  
 Centre for the Study of Early Agricultural Societies, University of Copenhagen
 
 ## Abstract
