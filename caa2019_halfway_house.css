@@ -74,16 +74,23 @@ section {
 	margin:0;
 }
 
+.column-break {
+	style="   break-after: always;
+	-moz-column-break-after: always;
+	-webkit-column-break-after: always;"
+}
+
 #frontmatter {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 20mm;
+		margin-top: 10mm;
 }
 
 #frontmatter h1 {
     font-size: 48pt;
     grid-column: 1 / span 1;
-    margin: 0;
+    margin-top: -15mm;
     font-style: italic;
 }
 
@@ -181,7 +188,7 @@ div.sub-box h2{
 
 #data_entry .text{
 	margin-left: 40mm;
-	margin-top: 30mm;
+	margin-top: 25mm;
 	width: 130mm;
 }
 
@@ -218,11 +225,11 @@ div.sub-box h2{
 
 #safe {
 	width: 160mm;
-	height: 120mm;
+	height: 100mm;
 	left: 360mm;
 	top: 380mm;
 	background-image:url('images/label.png');
-	background-size: 80%;
+	background-size: 80% 90%;
 	z-index:800;
 }
 #safe .text {
@@ -251,7 +258,7 @@ div.sub-box h2{
 
 #expendible .text {
 	position:absolute;
-	bottom:45mm;
+	bottom:40mm;
 	width:75mm;
 	left:8mm;
 }
@@ -270,7 +277,7 @@ div.sub-box h2{
 
 #filtered .text{
 	margin-left: 45mm;
-	margin-top: 10mm;
+	margin-top: 15mm;
 	width: 100mm;
 }
 
